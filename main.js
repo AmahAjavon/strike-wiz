@@ -17,7 +17,7 @@ function init() {
     rolled = false;
     $('#result').html("0");
     $('.screen').text('');
-    $('.keys').removeClass('blank');
+    $('.keys').removeClass('selected');
     $('.num').val('');
     sum = 0;
   });
@@ -33,7 +33,7 @@ function init() {
 
   $('.keys').on('click', '.num', function() {
 
-    $(this).addClass('blank');
+    $(this).addClass('selected');
     var clickVal = $(this).text();
     var screenVal = $('.screen').text();
 
@@ -53,7 +53,7 @@ function init() {
   });
 
   $('#answer').click(function() {
-    $('.keys').removeClass('blank');
+    $('.keys').removeClass('selected');
     $('.screen').text('');
     if (sum !== newDice) {
       $('.output').html('Wrong addition, try again!');

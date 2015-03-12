@@ -1,118 +1,94 @@
-> *,
-*:after,
-*:before {
- box-sizing: border-box;
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
-}
 body {
- font-family: helvetica, arial, sans-serif;
- text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
 }
 .container {
- margin: 10px auto;
- width: 900px;
- /*height: 100px;*/
- text-align: center;
+  margin: 10px auto;
+  width: 900px;
+  text-align: center;
 }
 .numbers {
- padding: 30px 30px 30px 30px;
- /*margin-top: 10px;*/
- background-color: purple;
- border-radius: 10px;
- font-size: 5px;
- box-shadow: 1px 1px 0 #CCC,2px 2px 0 #CCC, 3px 3px 0 #444,5px 5px 0 #444,6px 6px 0 #444,7px 7px 0 #444;
+  padding: 30px 30px 30px 30px;
+  background-color: purple;
+  border-radius: 10px;
+  font-size: 5px;
+  box-shadow: 1px 1px 0 #CCC,2px 2px 0 #CCC, 3px 3px 0 #444,5px 5px 0 #444,6px 6px 0 #444,7px 7px 0 #444;
 }
 .screen {
- box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 1px 1px 0 #444,1px 1px 0 #444,2px 2px 0 #444,3px 3px 0 #444;
- width: 50%;
- border-radius: 10px;
- height: 50px;
- border: 50px;
- color: brown;
- background-color: #eee;
- text-align: right;
- font-size: 30px;
- display: inline-block;
- /*padding: 40px 60px 100px 200px;*/
+  box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 1px 1px 0 #444,1px 1px 0 #444,2px 2px 0 #444,3px 3px 0 #444;
+  width: 50%;
+  border-radius: 10px;
+  height: 50px;
+  border: 50px;
+  color: brown;
+  background-color: #eee;
+  text-align: right;
+  font-size: 30px;
+  display: inline-block;
 }
 .numbers .row {
- margin-top: 10px;
- /*padding-left: 17px;*/
+  margin-top: 10px;
 }
 .numbers .num {
- box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 1px 1px 0 #444,1px 1px 0 #444,2px 2px 0 #444,3px 3px 0 #444;
- width: 100px;
- /*height: 370px;*/
- display: inline-block;
- background-color: orange;
- color: white;
- font-size: 6rem;
- margin-right: 15px;
- border-radius: 15px;
- height: 100px;
- line-height: 100px;
- text-align: center;
+  box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 1px 1px 0 #444,1px 1px 0 #444,2px 2px 0 #444,3px 3px 0 #444;
+  width: 100px;
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  font-size: 6rem;
+  margin-right: 15px;
+  border-radius: 15px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
 
-.blank {
- /*box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 1px 1px 0 #444,1px 1px 0 #444,2px 2px 0 #444,3px 3px 0 #444;
- width: 100px;
- /*height: 370px;*/
- /*display: inline-block;*/
- background-color: white;
- /*color: white;
- font-size: 6rem;
- margin-right: 15px;
- border-radius: 15px;
- height: 100px;
- line-height: 100px;
- text-align: center;*/
+.numbers .selected {
+  background-color: white;
 }
 
 .numbers .num:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 .num.last {
- margin-right: 0px;
+  margin-right: 0px;
 }
 .num.action {
- background-color: #646060;
+  background-color: #646060;
 }
 
 .numbers .row {
- margin-top: 10px;
- padding-left: 17px;
+  margin-top: 10px;
+  padding-left: 17px;
 }
 .numbers button {
- box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 2px 2px 0 #444,3px 3px 0 #444,4px 4px 0 #444,5px 5px 0 #444;
- width: 200px;
- height: 100px;
- display: inline-block;
- background-color: pink;
- color: blue;
- font-size: 4rem;
- margin-right: 5px;
- border-radius: 5px;
- height: 100px;
- line-height: 50px;
- text-align: center;
+  box-shadow: 1px 1px 0 #CCC,1px 1px 0 #CCC, 2px 2px 0 #444,3px 3px 0 #444,4px 4px 0 #444,5px 5px 0 #444;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  background-color: pink;
+  color: blue;
+  font-size: 4rem;
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 100px;
+  line-height: 50px;
+  text-align: center;
 }
 .numbers button:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 button.last {
- margin-right: 0px;
+  margin-right: 0px;
 }
 button.action {
- background-color: #646060;
+  background-color: #646060;
 }
 
 .title {
   text-align: center;
   color: red;
   text-shadow: 1px 1px 0 #CCC,2px 2px 0 #CCC, 3px 3px 0 #444,4px 4px 0 #444,5px 5px 0 #444,6px 6px 0 #444;
-  /*box-shadow: 2px 2px 8px #000000;*/
 }
 
 .output{
@@ -135,19 +111,6 @@ button.action {
   background: white;
 
 }
-
-/*
-span {
-  background-color: pink;
-  box-sizing: border-box;
-  display: inline-block;
-  line-height: 3.5em;
-  margin: 2%;
-  text-align: center;
-  width: 20%;
-  border-radius: 15px;
-  font-size: 40px;
-}*/
 
 .roll {
   margin: 2%;

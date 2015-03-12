@@ -28,6 +28,7 @@ function init() {
     newDice = Math.floor(Math.random()*12) +1;
     diceRolls.push(newDice);
     total += diceRolls[diceRolls.length -1];
+    $('.output').html('');
     $('#result').html(newDice);
   });
 
@@ -48,24 +49,18 @@ function init() {
     sum += inp;
     if (!clickVal) {
       $('.output').html('Roll the dice and add the right numbers');
-      $('.output').delay(2000).hide(1);
     }
   });
 
   $('#answer').click(function() {
-    $('.keys').removeClass('selected');
     $('.screen').text('');
     if (sum !== newDice) {
       $('.output').html('Wrong addition, try again!');
-      $('.output').delay(2000).hide(1);
-      $('#result').html("0");
-      sum = 0;
     } else {
       $('.output').html('Good, roll again!');
-      $('.output').delay(2000).hide(1);
-      $('#result').html("0");
-      sum = 0;
     }
+    $('#result').html("0");
+    sum = 0;
 
   });
 

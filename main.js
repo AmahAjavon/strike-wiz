@@ -17,10 +17,9 @@ function init() {
     rolled = false;
     $('#result').html("0");
     $('.screen').text('');
-    // $('.keys').removeClass('blank');
-    // $('.num').val('');
+    $('.keys').removeClass('blank');
+    $('.num').val('');
     sum = 0;
-
   });
 
   $('.roll').click(function() {
@@ -31,69 +30,43 @@ function init() {
     total += diceRolls[diceRolls.length -1];
     $('#result').html(newDice);
   });
+
+  $('.keys').on('click', '.num', function() {
+
+    $(this).addClass('blank');
+    var clickVal = $(this).text();
+    var screenVal = $('.screen').text();
+
+    console.log('clickVal: ' + clickVal);
+    console.log('screenVal: ' + screenVal);
+
+    var totalVal = screenVal + clickVal;
+
+    console.log('totalVal: ' + totalVal);
+    $('.screen').text(totalVal);
+    var inp = parseInt(clickVal);
+    sum += inp;
+    if (!clickVal) {
+      $('.output').html('Roll the dice and add the right numbers');
+      $('.output').delay(2000).hide(1);
+    }
+  });
+
+  $('#answer').click(function() {
+    $('.keys').removeClass('blank');
+    $('.screen').text('');
+    if (sum !== newDice) {
+      $('.output').html('Wrong addition, try again!');
+      $('.output').delay(2000).hide(1);
+      $('#result').html("0");
+      sum = 0;
+    } else {
+      $('.output').html('Good, roll again!');
+      $('.output').delay(2000).hide(1);
+      $('#result').html("0");
+      sum = 0;
+    }
+
+  });
+
 }
-
-$('.keys').on('click', '.num', function() {
-
-  $(this).addClass('blank');
-  var clickVal = $(this).text();
-  var screenVal = $('.screen').text();
-
-  console.log('clickVal: ' + clickVal);
-  console.log('screenVal: ' + screenVal);
-
-  var totalVal = screenVal + clickVal;
-
-  console.log('totalVal: ' + totalVal);
-  $('.screen').text(totalVal);
-debugger;
-  var inp = parseInt(clickVal);
-  sum += inp;
-  if (!clickVal) {
-    // alert('Click and add numbers to match the dice value');
-    $('.output').html('Roll the dice and add the right numbers');
-    $('.output').delay(2000).hide(1);
-  }
-});
-
-$('#answer').click(function() {
-  $('.keys').removeClass('blank');
-  $('.screen').text('');
-  if (sum !== newDice) {
-    // alert('wrong addition, try again!');
-    $('.output').html('Wrong addition, try again!');
-    $('.output').delay(2000).hide(1);
-    $('#result').html("0");
-  sum = 0;
-  } else {
-    // alert('good, roll again');
-    $('.output').html('Good, roll again!');
-    $('.output').delay(2000).hide(1);
-    $('#result').html("0");
-    sum = 0;
-  }
-
-});
-
-
-
-
-
-
-
-// function begin() {
-// var timing = 60;
-//   $('.countdown').html(timing);
-//   $('.countdown').prop('disabled', true);
-//   myTimer = setInterval(function() {
-//     --timing;
-//     $('.countdown').html(timing);
-//     if ($('.keys').hasClass('blank')) {
-//       alert('Congrats you did it!');
-//     } else {
-//       alert('Too Slow! Try again');}
-//
-//       clearInterval(timer);
-//       $('.countdown').prop('disabled', false);
-//     }
-//   }, 1000);

@@ -43,7 +43,7 @@ function init() {
 }
 
 // $('.num').prop('disabled', true);
-$('.keys').on('click', '.num', function() {
+$('.keys').on('click', '.num:not(.selected)', function() {
 
   $(this).addClass('selected');
   $(this).prop('disabled', true);

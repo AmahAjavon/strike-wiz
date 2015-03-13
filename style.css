@@ -1,11 +1,18 @@
 body {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+  overflow-y: auto;
+  _overflow: auto;*/
+  *margin: 0 0 1em;
 }
 .container {
   margin: 10px auto;
   width: 900px;
   text-align: center;
+  width: 100%;
+  /*overflow-y: auto;
+  _overflow: auto;*/
+  /*margin: 0 0 1em;*/
 }
 .numbers {
   padding: 30px 30px 30px 30px;
@@ -25,6 +32,10 @@ body {
   text-align: right;
   font-size: 30px;
   display: inline-block;
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .numbers .row {
   margin-top: 10px;
